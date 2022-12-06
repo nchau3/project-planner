@@ -92,4 +92,4 @@ Start with personal project planner, expand to team functionality (monday, Jira,
 
 - task_user (bridge)
     - task_id FK
-    -u ser_id FK
+    - user_id FK
