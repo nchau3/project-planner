@@ -20,37 +20,37 @@ Start with personal project planner, expand to team functionality (monday, Jira,
   -messages (stretch)
 
 - Create a new project
-  -include default categories
-  -create custom categories
-  -timeline to see all tasks in order to be completed
-  -analytics (progress)
-    -percent overall completed
-    -time/story points used per category
+  - include default categories
+  - create custom categories
+  - timeline to see all tasks in order to be completed
+  - analytics (progress)
+    - percent overall completed
+    - time/story points used per category
 
 - Create/Modify boards within project
-  -change task status (drag/drop?)
+  - change task status (drag/drop?)
 
 - Create/Modify tasks for boards
-  -assign category
-  -add comments
+  - assign category
+  - add comments
 
 - Misc. Features
-  -mobile support/responsive design
-  -adjust color scheme (dark mode)
-  -user settings
-    -notifications (text, email)
-    -change profile pic
-  -general analytics/report generating
+  - mobile support/responsive design
+  - adjust color scheme (dark mode)
+  - user settings
+    - notifications (text, email)
+    - change profile pic
+  - general analytics/report generating
 
 # Team features (stretch)
 - message other users
 - assign members to tasks
 
 - Search
-  -return results for
-    -users
-    -tasks
-    -comments
+  - return results for
+    - users
+    - tasks
+    - comments
 
 ## ERD (models)
 
@@ -85,11 +85,11 @@ Start with personal project planner, expand to team functionality (monday, Jira,
   - status ( pending, in progess, complete )
 
 - Comments
-  -task_id FK
-  -user_id FK
-  -content (text)
-  -date posted
+  - task_id FK
+  - user_id FK
+  - content (text)
+  - date posted
 
 - task_user (bridge)
-    -task_id FK
-    -user_id FK
+    - task_id FK
+    -u ser_id FK
