@@ -1,0 +1,1 @@
+INSERT INTO projects (title, description, date_created, date_due) VALUES ('Test Project', 'A way to test database connection and MVC approach', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
