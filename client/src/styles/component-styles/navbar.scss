@@ -1,0 +1,46 @@
+@use '../variables.scss';
+@import "../mixins.scss";
+
+.nav-link {
+  text-decoration: none;
+  color: variables.$accent-color;
+  width: fit-content;
+}
+
+nav {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  background-color: variables.$primary-color;
+  color: variables.$accent-color;
+
+  h1 {
+    width: fit-content;
+  }
+
+  ul {
+    list-style-type: none;
+    
+    li {
+      padding: .5em .5em;
+      font-size: 2em;
+      list-style-type: none;
+      background-color: variables.$primary-color;
+    }
+    
+    li:hover {
+      background-color: variables.$accent-color;
+      .nav-link {
+        color: variables.$primary-color;
+      }
+    }
+
+    .selected {
+      font-size: 1.25em;
+      position: relative;
+      left: .5em;
+    }
+
+  }
+
+}
