@@ -1,0 +1,35 @@
+@use "./variables.scss";
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+@mixin button-styling {
+  @include reset;
+
+  button {
+    width: fit-content;
+    padding: .6em .9em;
+    margin: .5em;
+    border: none;
+    transition: opacity .1s;
+    font-weight: 800;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: variables.$accent-color;
+    background-color: variables.$primary-color;
+    border-radius: .2em;
+  }
+
+  button:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+  }
+
+  button:active {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+
+}
