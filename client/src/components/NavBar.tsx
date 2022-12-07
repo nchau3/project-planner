@@ -1,15 +1,32 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
 import '../styles/component-styles/navbar.scss';
 
 export default function NavBar() {
+  const activeClassNames = "nav-link selected";
+
   return ( 
     <nav>
       <ul>
         <li>
-          <a href={`dashboard`} className="nav-link">DASHBOARD</a>
+          <NavLink
+            to={`dashboard`}
+            className={({ isActive }) =>
+              isActive ? activeClassNames : "nav-link"
+            }
+          >
+              DASHBOARD
+            </ NavLink>
         </li>
         <li>
-          <a href={`projects`} className="nav-link">PROJECTS</a>
+          <NavLink
+            to={`projects`}
+            className={({ isActive }) =>
+              isActive ? activeClassNames : "nav-link"
+            }
+          >
+              PROJECTS
+            </ NavLink>
         </li>
       </ul>
     </nav>
