@@ -4,22 +4,27 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import './styles/index.scss';
 
 //main
-import App from './App';
+import Root from './Root';
 import ErrorPage from './components/ErrorPage';
 
 //pages
 import Projects from './components/routes/Projects';
+import Dashboard from './components/routes/Dashboard';
 
 //routes
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
         path: "projects",
         element: <Projects />
+      },
+      {
+        path: "dashboard",
+        element: <Dashboard />
       }
     ]
   }
