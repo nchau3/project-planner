@@ -1,1 +1,2 @@
-INSERT INTO projects (title, description, date_created, date_due) VALUES ('Test Project', 'A way to test database connection and MVC approach', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO projects (owner_id, title, description, date_due) VALUES (1, 'Test Project', 'A way to test database connection. Does this work?', '2023-01-01 12:00:00-00');
+INSERT INTO projects (owner_id, title, description, date_due) VALUES (1, 'The Second of Many', 'Dummy data, data dummy, ipsum lorem carpe diem amen', '2023-01-01 12:00:00-00');
