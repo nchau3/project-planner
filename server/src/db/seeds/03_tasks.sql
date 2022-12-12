@@ -1,0 +1,3 @@
+INSERT INTO tasks (owner_id, project_id, title, description, priority, date_due) VALUES (1, 2, 'Database Setup', 'Write schema/seeds according to ERD', 3, '2023-01-01 12:00:00-00');
+INSERT INTO tasks (owner_id, project_id, title, description, priority, date_due) VALUES (1, 1, 'Start this project', 'Get the thing to do stuff', 5, '2023-01-01 12:00:00-00');
+INSERT INTO tasks (owner_id, project_id, title, description, priority, date_due) VALUES (1, 2, 'Front End', 'Make the app look pretty', 2, '2023-01-01 12:00:00-00');
