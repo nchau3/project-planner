@@ -1,10 +1,10 @@
-const db = require('../connection');
+import db from '../connection';
 
-const getProjects = () => {
+const getAllProjects = () => {
   return db.query('SELECT * FROM projects;')
     .then((data: any) => {
       return data.rows;
     })
 }
 
-module.exports = { getProjects };
+export { getAllProjects };

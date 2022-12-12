@@ -3,9 +3,13 @@ const app = express();
 const cors = require("cors");
 
 //routes
+import userRoutes from './routes/users';
 import projectRoutes from './routes/projects';
+import taskRoutes from './routes/tasks';
 
+app.use('/users', userRoutes);
 app.use('/projects', projectRoutes);
+app.use('/tasks', taskRoutes);
 
 //middleware
 app.use(cors());
@@ -18,4 +22,3 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction ) => {
 app.listen(5000, () => {
   console.log("listening on port 5000...")
 });
-

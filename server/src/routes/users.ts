@@ -1,10 +1,10 @@
 import { Router } from 'express';
 const router = Router();
 
-import { getAllProjects } from '../controllers/projects';
+import { getAllUsers } from '../controllers/users';
 
 router.get('/', (req, res, next) => {
-  getAllProjects(req, res, next);
+  getAllUsers(req, res, next);
 })
 
 export default router;

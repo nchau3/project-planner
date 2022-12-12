@@ -1,8 +1,9 @@
 DROP TABLE IF EXISTS projects CASCADE;
 CREATE TABLE projects (
   id SERIAL PRIMARY KEY NOT NULL,
-  title VARCHAR(15) NOT NULL,
+  owner_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  title VARCHAR(50) NOT NULL,
   description TEXT,
-  date_created TIMESTAMP,
+  date_created TIMESTAMP NOT NULL DEFAULT now(),
   date_due TIMESTAMP
 );
