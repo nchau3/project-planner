@@ -1,10 +1,10 @@
 import { Router } from 'express';
 const router = Router();
 
-import { getAllProjects } from '../controllers/projects';
+import { getAllComments } from '../controllers/comments';
 
 router.get('/', (req, res, next) => {
-  getAllProjects(req, res, next);
+  getAllComments(req, res, next);
 })
 
 export default router;
