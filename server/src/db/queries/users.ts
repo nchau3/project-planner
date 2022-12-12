@@ -1,4 +1,4 @@
-const db = require('../connection');
+import db from '../connection';
 
 const getAllUsers = () => {
   return db.query('SELECT * FROM users;')

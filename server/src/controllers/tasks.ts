@@ -5,8 +5,8 @@ const taskQueries = require('../db/queries/tasks');
 
 export const getAllTasks: RequestHandler = (req, res, next) => {
   taskQueries.getAllTasks()
-    .then((projects: Task[]) => {
-      res.json({ projects });
+    .then((tasks: Task[]) => {
+      res.json({ tasks });
     })
     .catch((err: Error) => {
       res

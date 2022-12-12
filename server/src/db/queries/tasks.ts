@@ -7,4 +7,4 @@ const getAllTasks = () => {
     })
 }
 
-module.exports = { getAllTasks };
+export { getAllTasks };

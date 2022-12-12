@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getProjects = void 0;
+exports.getAllProjects = void 0;
 const projectQueries = require('../db/queries/projects');
-const getProjects = (req, res, next) => {
-    projectQueries.getProjects()
+const getAllProjects = (req, res, next) => {
+    projectQueries.getAllProjects()
         .then((projects) => {
         res.json({ projects });
     })
@@ -13,5 +13,5 @@ const getProjects = (req, res, next) => {
             .json({ error: err.message });
     });
 };
-exports.getProjects = getProjects;
-module.exports = { getProjects: exports.getProjects };
+exports.getAllProjects = getAllProjects;
+module.exports = { getAllProjects: exports.getAllProjects };

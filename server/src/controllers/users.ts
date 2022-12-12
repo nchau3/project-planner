@@ -5,8 +5,8 @@ const userQueries = require('../db/queries/users');
 
 export const getAllUsers: RequestHandler = (req, res, next) => {
   userQueries.getAllUsers()
-    .then((projects: User[]) => {
-      res.json({ projects });
+    .then((users: User[]) => {
+      res.json({ users });
     })
     .catch((err: Error) => {
       res

@@ -36,4 +36,4 @@ const dbParams = {
 };
 const db = new pg_1.Pool(dbParams);
 db.connect();
-module.exports = db;
+exports.default = db;

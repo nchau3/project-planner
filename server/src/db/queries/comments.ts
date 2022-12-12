@@ -7,4 +7,4 @@ const getAllComments = () => {
     })
 }
 
-module.exports = { getAllComments };
+export { getAllComments };

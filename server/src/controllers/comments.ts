@@ -5,8 +5,8 @@ const commentQueries = require('../db/queries/comments');
 
 export const getAllComments: RequestHandler = (req, res, next) => {
   commentQueries.getAllComments()
-    .then((projects: Comment[]) => {
-      res.json({ projects });
+    .then((comments: Comment[]) => {
+      res.json({ comments });
     })
     .catch((err: Error) => {
       res
