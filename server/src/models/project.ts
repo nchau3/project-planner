@@ -1,8 +1,8 @@
-export class Project {
-  constructor(
-    public title: string,
-    public description: string,
-    public date_created: Date,
-    public date_due: Date,  
-  ) {}
+export interface Project {
+  id: number,
+  owner_id: number,
+  title: string,
+  description: string,
+  date_created: Date,
+  date_due: Date,  
 }
