@@ -7,4 +7,4 @@ const getAllUsers = () => {
     })
 }
 
-module.exports = { getAllUsers };
+export { getAllUsers };
