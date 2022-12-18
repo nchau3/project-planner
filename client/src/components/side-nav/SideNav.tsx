@@ -1,12 +1,26 @@
 import SideNavItem from './SideNavItem';
 import '../../styles/component-styles/side-nav/side-nav.scss';
 
-export default function SideNav() {
+type sideNavItems = {
+  name: string,
+  route: string
+}
+
+interface sideNavProps {
+  items: sideNavItems[];
+}
+
+export default function SideNav(props: sideNavProps) {
+  const navList = props.items.map(item => {
+    return(
+      <SideNavItem name={item.name} route={item.route} />
+    )
+  })
+
   return ( 
-    <nav>
+    <nav className='side-nav'>
       <ul>
-        <SideNavItem name={'Dashboard'} route={'dashboard'} />
-        <SideNavItem name={'Projects'} route={'projects'} />
+        {navList}
       </ul>
     </nav>
   );

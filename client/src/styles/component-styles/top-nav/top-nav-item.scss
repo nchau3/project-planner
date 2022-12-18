@@ -1,28 +1,23 @@
 @use '../../variables.scss';
 @import "../../mixins.scss";
 
-.side-nav {
+.top-nav {
   li {
     padding: .5em;
-    font-size: 2em;
+    margin: 0 .25em;
+    font-size: 1.5em;
     list-style-type: none;
     background-color: variables.$primary-color;
   }
   
   li:hover {
     background-color: variables.$accent-color;
-    .side-nav-link {
+    .top-nav-link {
       color: variables.$primary-color;
     }
   }
   
-  .selected {
-    font-size: 1.25em;
-    position: relative;
-    left: .5em;
-  }
-  
-  .side-nav-link {
+  .top-nav-link {
     text-decoration: none;
     color: variables.$accent-color;
     width: fit-content;
