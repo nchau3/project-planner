@@ -1,0 +1,20 @@
+@use '../../variables.scss';
+@import "../../mixins.scss";
+
+nav {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  border-right: 1px solid;
+  background-color: variables.$primary-color;
+  color: variables.$accent-color;
+
+  h1 {
+    width: fit-content;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+}
