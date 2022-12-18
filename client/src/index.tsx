@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouteObject, RouterProvider } from 'react-router-dom';
 import './styles/index.scss';
 
 //main
@@ -8,27 +8,26 @@ import Root from './Root';
 import ErrorPage from './components/ErrorPage';
 
 //pages
-import Projects from './components/routes/Projects';
-import Dashboard from './components/routes/Dashboard';
+import Dashboard from './components/routes/Dashboard/Dashboard';
+import { projectRoutes } from './components/routes/Projects/Projects';
 
 //routes
-const router = createBrowserRouter([
+const routes: RouteObject[] = [
   {
     path: '/',
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
+      projectRoutes,
       {
-        path: "projects",
-        element: <Projects />
-      },
-      {
-        path: "dashboard",
+        path: "/dashboard",
         element: <Dashboard />
       }
     ]
   }
-])
+]
+
+const router = createBrowserRouter(routes);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
