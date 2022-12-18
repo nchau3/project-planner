@@ -1,0 +1,19 @@
+@use '../../variables.scss';
+@import "../../mixins.scss";
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+  padding: 0 1rem;
+  position: fixed;
+  border-bottom: solid 1px;
+  background-color: white;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+}

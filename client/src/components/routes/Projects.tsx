@@ -1,9 +1,17 @@
-import React from 'react';
+import SideNav from '../side-nav/SideNav';
 
 export default function Projects() {
+  const navItems = [
+    {name: 'Active', route: 'active'},
+    {name: 'Completed', route: 'completed'}
+  ]
+
   return (
-    <div className="page-container">
-      <h1>Projects Page</h1>
-    </div>
+    <>
+      <SideNav items={navItems}/>
+      <div className="page-content">
+        <h1>Projects</h1>
+      </div>
+    </>
   )
 }

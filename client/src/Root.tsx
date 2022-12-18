@@ -1,11 +1,11 @@
 import { Outlet } from 'react-router-dom';
-import NavBar from './components/NavBar';
+import TopNav from './components/top-nav/TopNav';
 import './styles/root.scss';
 
 export default function Root() {
   return (
     <main>
-      <NavBar />
+      <TopNav />
       <div id="page-container">
         <Outlet />
       </div>

@@ -1,9 +1,17 @@
-import React from 'react';
+import SideNav from '../side-nav/SideNav';
 
 export default function Dashboard() {
+  const navItems = [
+    {name: 'My Profile', route: 'profile'},
+    {name: 'Settings', route: 'settings'}
+  ]
+
   return (
-    <div className="page-container">
-      <h1>Dashboard</h1>
-    </div>
+    <>
+      <SideNav items={navItems}/>
+      <div className="page-content">
+        <h1>Dashboard</h1>
+      </div>
+    </>
   )
 }

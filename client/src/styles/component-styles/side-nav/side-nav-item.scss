@@ -1,0 +1,30 @@
+@use '../../variables.scss';
+@import "../../mixins.scss";
+
+.side-nav {
+  li {
+    padding: .5em;
+    font-size: 2em;
+    list-style-type: none;
+    background-color: variables.$primary-color;
+  }
+  
+  li:hover {
+    background-color: variables.$accent-color;
+    .side-nav-link {
+      color: variables.$primary-color;
+    }
+  }
+  
+  .selected {
+    font-size: 1.25em;
+    position: relative;
+    left: .5em;
+  }
+  
+  .side-nav-link {
+    text-decoration: none;
+    color: variables.$accent-color;
+    width: fit-content;
+  }
+}

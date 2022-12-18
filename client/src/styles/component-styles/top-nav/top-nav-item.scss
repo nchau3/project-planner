@@ -1,0 +1,25 @@
+@use '../../variables.scss';
+@import "../../mixins.scss";
+
+.top-nav {
+  li {
+    padding: .5em;
+    margin: 0 .25em;
+    font-size: 1.5em;
+    list-style-type: none;
+    background-color: variables.$primary-color;
+  }
+  
+  li:hover {
+    background-color: variables.$accent-color;
+    .top-nav-link {
+      color: variables.$primary-color;
+    }
+  }
+  
+  .top-nav-link {
+    text-decoration: none;
+    color: variables.$accent-color;
+    width: fit-content;
+  }
+}
