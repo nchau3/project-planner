@@ -1,17 +1,22 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, RouteObject } from 'react-router-dom';
+
+//components
 import SideNav from '../../side-nav/SideNav';
 
 //routes
-import ProjectsMain from './ProjectsMain';
+import ProjectsRoot from './ProjectsRoot';
 import NewProject from './NewProject';
 
-export const projectRoutes = {
+//styles
+import '../../../styles/component-styles/projects.scss';
+
+export const projectRoutes: RouteObject = {
   path: "projects",
   element: <Projects />,
   children: [
     {
       path: "/projects",
-      element: <ProjectsMain />
+      element: <ProjectsRoot />
     },
     {
       path: "new",

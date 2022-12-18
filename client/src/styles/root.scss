@@ -10,12 +10,16 @@ main {
   height: 100%;
   width: 100%;
   padding-top: 75px;
+
+  h1 {
+    padding: .5em;
+  }
 }
 
 .page-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 300px;
+  padding: 1em 1em 1em 300px;
   height: 100%;
 }

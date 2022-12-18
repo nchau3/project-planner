@@ -8,8 +8,8 @@ import Root from './Root';
 import ErrorPage from './components/ErrorPage';
 
 //pages
-import Dashboard from './components/routes/Dashboard/Dashboard';
-import { projectRoutes } from './components/routes/Projects/Projects';
+import Dashboard from './components/pages/Dashboard/Dashboard';
+import { projectRoutes } from './components/pages/Projects/Projects';
 
 //routes
 const routes: RouteObject[] = [
