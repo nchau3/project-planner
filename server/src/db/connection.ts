@@ -1,10 +1,11 @@
 // PG database client/connection setup
-import { Pool, PoolConfig } from 'pg';
+import pg from 'pg';
+const { Pool } = pg;
 
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-const dbParams: PoolConfig = {
+const dbParams = {
   host: process.env.PGHOST || 'localhost',
   port: Number(process.env.PGPORT) || 5432,
   user: process.env.PGUSER || 'postgres',

@@ -1,21 +1,16 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const app = (0, express_1.default)();
+import express from 'express';
+const app = express();
 const cors = require("cors");
 //routes
-const users_1 = __importDefault(require("./routes/users"));
-const projects_1 = __importDefault(require("./routes/projects"));
-const tasks_1 = __importDefault(require("./routes/tasks"));
-app.use('/api/users', users_1.default);
-app.use('/api/projects', projects_1.default);
-app.use('/api/tasks', tasks_1.default);
+import userRoutes from './routes/users';
+import projectRoutes from './routes/projects';
+import taskRoutes from './routes/tasks';
+app.use('/api/users', userRoutes);
+app.use('/api/projects', projectRoutes);
+app.use('/api/tasks', taskRoutes);
 //middleware
 app.use(cors());
-app.use(express_1.default.json());
+app.use(express.json());
 app.use((err, req, res, next) => {
     res.status(500).json({ message: err.message });
 });

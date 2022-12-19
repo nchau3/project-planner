@@ -10,7 +10,7 @@ CREATE TABLE tasks (
   title VARCHAR(50) NOT NULL,
   description TEXT,
   priority INTEGER,
-  current_status status NOT NULL DEFAULT 'pending',
+  status status NOT NULL DEFAULT 'pending',
   date_created TIMESTAMP NOT NULL DEFAULT now(),
   date_started TIMESTAMP,
   date_due TIMESTAMP

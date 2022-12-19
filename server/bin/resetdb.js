@@ -1,9 +1,11 @@
 // load .env data into process.env
-require('dotenv').config();
+import { config } from 'dotenv';
+
+config();
 
 // other dependencies
-const fs = require('fs');
-const db = require('../dist/db/connection');
+import fs from 'fs';
+import db from '../dist/db/connection.js';
 
 // PG connection setup
 // const connectionString = process.env.DATABASE_URL ||

@@ -1,9 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = require("express");
-const router = (0, express_1.Router)();
-const projects_1 = require("../controllers/projects");
+import { Router } from 'express';
+const router = Router();
+import { getAllProjects } from '../controllers/projects';
 router.get('/', (req, res, next) => {
-    (0, projects_1.getAllProjects)(req, res, next);
+    getAllProjects(req, res, next);
 });
-exports.default = router;
+export default router;
