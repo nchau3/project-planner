@@ -1,4 +1,4 @@
-export default function ProjectDetails() {
+export default function ProjectCard() {
   return(
     <li className='project-details'>
       <div className='container'>
