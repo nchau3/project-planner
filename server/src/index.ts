@@ -7,9 +7,9 @@ import userRoutes from './routes/users';
 import projectRoutes from './routes/projects';
 import taskRoutes from './routes/tasks';
 
-app.use('/users', userRoutes);
-app.use('/projects', projectRoutes);
-app.use('/tasks', taskRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/projects', projectRoutes);
+app.use('/api/tasks', taskRoutes);
 
 //middleware
 app.use(cors());

@@ -13,7 +13,7 @@ interface sideNavProps {
 export default function SideNav(props: sideNavProps) {
   const navList = props.items.map(item => {
     return(
-      <SideNavItem name={item.name} route={item.route} />
+      <SideNavItem key={item.name} name={item.name} route={item.route} />
     )
   })
 

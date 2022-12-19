@@ -1,14 +1,13 @@
 .project-list {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   margin-left: 3rem;
 }
 
 .project-details {
-  width: 300px;
+  width: 450px;
   height: 150px;
   padding: .75rem;
+  margin-bottom: 1rem;
   border: solid 1px;
   
   .container {

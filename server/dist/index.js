@@ -10,9 +10,9 @@ const cors = require("cors");
 const users_1 = __importDefault(require("./routes/users"));
 const projects_1 = __importDefault(require("./routes/projects"));
 const tasks_1 = __importDefault(require("./routes/tasks"));
-app.use('/users', users_1.default);
-app.use('/projects', projects_1.default);
-app.use('/tasks', tasks_1.default);
+app.use('/api/users', users_1.default);
+app.use('/api/projects', projects_1.default);
+app.use('/api/tasks', tasks_1.default);
 //middleware
 app.use(cors());
 app.use(express_1.default.json());

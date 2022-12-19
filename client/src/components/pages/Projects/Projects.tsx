@@ -3,12 +3,12 @@ import { Outlet, RouteObject } from 'react-router-dom';
 //components
 import SideNav from '../../side-nav/SideNav';
 
-//routes
-import ProjectsRoot from './ProjectsRoot';
-import NewProject from './NewProject';
-
 //styles
 import '../../../styles/component-styles/projects.scss';
+
+//routes
+import ProjectsRoot, { loader as projectsLoader } from './ProjectsRoot';
+import NewProject from './NewProject';
 
 export const projectRoutes: RouteObject = {
   path: "projects",
@@ -16,7 +16,8 @@ export const projectRoutes: RouteObject = {
   children: [
     {
       path: "/projects",
-      element: <ProjectsRoot />
+      element: <ProjectsRoot />,
+      loader: projectsLoader
     },
     {
       path: "new",
