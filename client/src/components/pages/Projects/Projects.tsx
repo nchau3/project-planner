@@ -25,7 +25,7 @@ export const projectRoutes: RouteObject = {
   ]
 }
 
-export function Projects() {
+export default function Projects() {
   const navItems = [
     {name: 'New Project', route:'new'},
     {name: 'Active', route: 'active'},
