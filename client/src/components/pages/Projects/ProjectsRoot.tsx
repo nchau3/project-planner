@@ -1,20 +1,22 @@
 import { useLoaderData } from "react-router-dom";
 import { getProjects } from "../../../util/api";
 import ProjectCard from "./ProjectCard";
-import { Project } from "../../../../../server/src/models/project";
 
 export function loader(){
   return getProjects();
 }
 
 export default function ProjectsRoot() {
-  const projects = useLoaderData() as Project[];
+  const projects = useLoaderData() as any[];
 
   const projectsList = projects.map(project => {
     return (
       <ProjectCard
         title={project.title}
+        owner={`${project.first_name} ${project.last_name}`}
         description={project.description}
+        tasks_total={project.tasks_total}
+        tasks_completed={project.tasks_completed}
       />
     )
   })

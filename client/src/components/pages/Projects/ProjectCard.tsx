@@ -1,6 +1,9 @@
 interface projectCardProps {
   title: string;
+  owner: string;
   description: string;
+  tasks_total: number;
+  tasks_completed: number;
 }
 
 export default function ProjectCard(props: projectCardProps) {
@@ -13,7 +16,7 @@ export default function ProjectCard(props: projectCardProps) {
         </header>
         <p>{props.description}</p>
         <footer>
-          <div>10 of 15 tasks completed</div>
+          <div>{props.tasks_completed} of {props.tasks_total} completed</div>
           <div>Last Modified: Yesterday</div>
         </footer>
       </div>
