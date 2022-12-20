@@ -10,4 +10,17 @@ const getAllProjects = (req, res, next) => {
             .json({ error: err.message });
     });
 };
-export { getAllProjects };
+const createProject = (req, res, next) => {
+    const project = req.params;
+    console.log(project);
+    /*   projectQueries.createProject()
+        .then(data => {
+          res.json({ data });
+        })
+        .catch((err: Error) => {
+          res
+            .status(500)
+            .json({ error: err.message });
+        }); */
+};
+export { getAllProjects, createProject };

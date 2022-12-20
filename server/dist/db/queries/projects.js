@@ -16,4 +16,14 @@ const getAllProjects = () => {
         return data.rows;
     });
 };
-export { getAllProjects };
+const createProject = (project) => {
+    const { owner_id, title, description, date_due } = project;
+    return db.query(`
+    INSERT INTO projects (owner_id, title, description, date_due)
+    VALUES ($1, $2, $3, $4)
+  ;`, [owner_id, title, description, date_due])
+        .then((data) => {
+        return data.rows;
+    });
+};
+export { getAllProjects, createProject };

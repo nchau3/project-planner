@@ -1,5 +1,6 @@
-import { QueryResult } from 'pg';
 import db from '../connection.js';
+import { QueryResult } from 'pg';
+import { Project } from '../../models/project.js';
 
 const getAllProjects = () => {
   return db.query(`
@@ -17,6 +18,18 @@ const getAllProjects = () => {
     .then((data: QueryResult) => {
       return data.rows;
     })
+};
+
+const createProject = (project: Project) => {
+  const { owner_id, title, description, date_due } = project
+
+  return db.query(`
+    INSERT INTO projects (owner_id, title, description, date_due)
+    VALUES ($1, $2, $3, $4)
+  ;`, [owner_id, title, description, date_due])
+  .then((data: QueryResult) => {
+    return data.rows;
+  })
 }
 
-export { getAllProjects };
+export { getAllProjects, createProject };

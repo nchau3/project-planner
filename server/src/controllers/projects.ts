@@ -15,4 +15,19 @@ const getAllProjects: RequestHandler = (req, res, next) => {
     });
 };
 
-export { getAllProjects };
+const createProject: RequestHandler = (req, res, next) => {
+  const project = req.params
+  console.log(project);
+
+/*   projectQueries.createProject()
+    .then(data => {
+      res.json({ data });
+    })
+    .catch((err: Error) => {
+      res
+        .status(500)
+        .json({ error: err.message });
+    }); */
+};
+
+export { getAllProjects, createProject };

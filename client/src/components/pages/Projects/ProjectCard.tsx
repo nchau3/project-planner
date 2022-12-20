@@ -16,7 +16,7 @@ export default function ProjectCard(props: projectCardProps) {
         </header>
         <p>{props.description}</p>
         <footer>
-          <div>{props.tasks_completed} of {props.tasks_total} completed</div>
+          <div>{props.tasks_completed} of {props.tasks_total} tasks_total completed</div>
           <div>Last Modified: Yesterday</div>
         </footer>
       </div>
