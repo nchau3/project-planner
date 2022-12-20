@@ -1,15 +1,15 @@
-import { Form } from "react-router-dom";
+import { Form, redirect } from "react-router-dom";
 import { createProject } from "../../../util/api";
 
 export async function action({request}: any) {
   const formData = await request.formData();
   const project = Object.fromEntries(formData);
   try {
-    const newProject = await createProject(project);
-    return { newProject };
+    await createProject(project);
   } catch (err) {
     throw err;
   }
+  return redirect('/projects');
 }
 
 export default function NewProject() {
