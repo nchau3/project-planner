@@ -9,9 +9,12 @@ export function loader(){
 export default function ProjectsRoot() {
   const projects = useLoaderData() as any[];
 
+  console.log(projects);
+
   const projectsList = projects.map(project => {
     return (
       <ProjectCard
+        key={project.id}
         title={project.title}
         owner={`${project.first_name} ${project.last_name}`}
         description={project.description}

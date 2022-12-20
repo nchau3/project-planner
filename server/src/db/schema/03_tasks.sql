@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS tasks CASCADE;
-DROP TYPE IF EXISTS status CASCADE;
+DROP TYPE IF EXISTS status_type CASCADE;
 
 CREATE TYPE status_type AS ENUM ('pending', 'in progress', 'complete');
 

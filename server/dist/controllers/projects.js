@@ -11,16 +11,16 @@ const getAllProjects = (req, res, next) => {
     });
 };
 const createProject = (req, res, next) => {
-    const project = req.params;
+    const project = req.body.project;
     console.log(project);
-    /*   projectQueries.createProject()
+    projectQueries.createProject(project)
         .then(data => {
-          res.json({ data });
-        })
-        .catch((err: Error) => {
-          res
+        res.json({ data });
+    })
+        .catch((err) => {
+        res
             .status(500)
             .json({ error: err.message });
-        }); */
+    });
 };
 export { getAllProjects, createProject };

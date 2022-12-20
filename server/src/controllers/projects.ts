@@ -16,10 +16,10 @@ const getAllProjects: RequestHandler = (req, res, next) => {
 };
 
 const createProject: RequestHandler = (req, res, next) => {
-  const project = req.params
+  const project = req.body.project;
   console.log(project);
 
-/*   projectQueries.createProject()
+  projectQueries.createProject(project)
     .then(data => {
       res.json({ data });
     })
@@ -27,7 +27,7 @@ const createProject: RequestHandler = (req, res, next) => {
       res
         .status(500)
         .json({ error: err.message });
-    }); */
+    });
 };
 
 export { getAllProjects, createProject };
