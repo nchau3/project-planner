@@ -1,4 +1,4 @@
-import db from '../connection';
+import db from '../connection.js';
 const getAllProjects = () => {
     return db.query(`
     SELECT 

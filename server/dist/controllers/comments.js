@@ -1,5 +1,5 @@
-const commentQueries = require('../db/queries/comments');
-export const getAllComments = (req, res, next) => {
+import * as commentQueries from '../db/queries/comments.js';
+const getAllComments = (req, res, next) => {
     commentQueries.getAllComments()
         .then((comments) => {
         res.json({ comments });
@@ -10,4 +10,4 @@ export const getAllComments = (req, res, next) => {
             .json({ error: err.message });
     });
 };
-module.exports = { getAllComments };
+export { getAllComments };

@@ -1,5 +1,5 @@
-const taskQueries = require('../db/queries/tasks');
-export const getAllTasks = (req, res, next) => {
+import * as taskQueries from '../db/queries/tasks.js';
+const getAllTasks = (req, res, next) => {
     taskQueries.getAllTasks()
         .then((tasks) => {
         res.json({ tasks });
@@ -10,4 +10,4 @@ export const getAllTasks = (req, res, next) => {
             .json({ error: err.message });
     });
 };
-module.exports = { getAllTasks };
+export { getAllTasks };

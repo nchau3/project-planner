@@ -1,9 +1,9 @@
 import { RequestHandler } from "express";
 import { Project } from "../models/project";
 
-const projectQueries = require('../db/queries/projects');
+import * as projectQueries from '../db/queries/projects.js';
 
-export const getAllProjects: RequestHandler = (req, res, next) => {
+const getAllProjects: RequestHandler = (req, res, next) => {
   projectQueries.getAllProjects()
     .then((projects: Project[]) => {
       res.json({ projects });
@@ -15,4 +15,4 @@ export const getAllProjects: RequestHandler = (req, res, next) => {
     });
 };
 
-module.exports = { getAllProjects };
+export { getAllProjects };

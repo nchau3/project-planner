@@ -1,5 +1,5 @@
-const userQueries = require('../db/queries/users');
-export const getAllUsers = (req, res, next) => {
+import * as userQueries from '../db/queries/users.js';
+const getAllUsers = (req, res, next) => {
     userQueries.getAllUsers()
         .then((users) => {
         res.json({ users });
@@ -10,4 +10,4 @@ export const getAllUsers = (req, res, next) => {
             .json({ error: err.message });
     });
 };
-module.exports = { getAllUsers };
+export { getAllUsers };

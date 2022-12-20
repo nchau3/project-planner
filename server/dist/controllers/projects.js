@@ -1,5 +1,5 @@
-const projectQueries = require('../db/queries/projects');
-export const getAllProjects = (req, res, next) => {
+import * as projectQueries from '../db/queries/projects.js';
+const getAllProjects = (req, res, next) => {
     projectQueries.getAllProjects()
         .then((projects) => {
         res.json({ projects });
@@ -10,4 +10,4 @@ export const getAllProjects = (req, res, next) => {
             .json({ error: err.message });
     });
 };
-module.exports = { getAllProjects };
+export { getAllProjects };

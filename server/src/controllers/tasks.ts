@@ -1,9 +1,9 @@
 import { RequestHandler } from "express";
 import { Task } from '../models/task';
 
-const taskQueries = require('../db/queries/tasks');
+import * as taskQueries from '../db/queries/tasks.js';
 
-export const getAllTasks: RequestHandler = (req, res, next) => {
+const getAllTasks: RequestHandler = (req, res, next) => {
   taskQueries.getAllTasks()
     .then((tasks: Task[]) => {
       res.json({ tasks });
@@ -15,4 +15,4 @@ export const getAllTasks: RequestHandler = (req, res, next) => {
     });
 };
 
-module.exports = { getAllTasks };
+export { getAllTasks };

@@ -1,4 +1,5 @@
-import db from '../connection';
+import { QueryResult } from 'pg';
+import db from '../connection.js';
 
 const getAllProjects = () => {
   return db.query(`
@@ -13,7 +14,7 @@ const getAllProjects = () => {
     JOIN tasks ON projects.id = tasks.project_id
     GROUP BY projects.id, first_name, last_name
     ;`)
-    .then((data: any) => {
+    .then((data: QueryResult) => {
       return data.rows;
     })
 }

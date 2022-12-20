@@ -1,9 +1,9 @@
 import { RequestHandler } from "express";
 import { Comment } from "../models/comment";
 
-const commentQueries = require('../db/queries/comments');
+import * as commentQueries from '../db/queries/comments.js';
 
-export const getAllComments: RequestHandler = (req, res, next) => {
+const getAllComments: RequestHandler = (req, res, next) => {
   commentQueries.getAllComments()
     .then((comments: Comment[]) => {
       res.json({ comments });
@@ -15,4 +15,4 @@ export const getAllComments: RequestHandler = (req, res, next) => {
     });
 };
 
-module.exports = { getAllComments };
+export { getAllComments };
