@@ -17,7 +17,6 @@ const getAllProjects: RequestHandler = (req, res, next) => {
 
 const createProject: RequestHandler = (req, res, next) => {
   const project = req.body.project;
-  console.log(project);
 
   projectQueries.createProject(project)
     .then(data => {

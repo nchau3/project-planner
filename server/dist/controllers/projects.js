@@ -12,7 +12,6 @@ const getAllProjects = (req, res, next) => {
 };
 const createProject = (req, res, next) => {
     const project = req.body.project;
-    console.log(project);
     projectQueries.createProject(project)
         .then(data => {
         res.json({ data });
