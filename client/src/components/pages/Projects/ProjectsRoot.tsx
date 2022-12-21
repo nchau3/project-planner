@@ -13,6 +13,7 @@ export default function ProjectsRoot() {
     return (
       <ProjectCard
         key={project.id}
+        id={project.id}
         title={project.title}
         owner={`${project.first_name} ${project.last_name}`}
         description={project.description}

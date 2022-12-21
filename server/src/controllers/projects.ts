@@ -15,6 +15,20 @@ const getAllProjects: RequestHandler = (req, res, next) => {
     });
 };
 
+const getProject: RequestHandler = (req, res, next) => {
+  const project_id = req.params.project_id;
+
+  projectQueries.getProject(project_id)
+    .then((project: Project) => {
+      res.json(project);
+    })
+    .catch((err: Error) => {
+      res
+        .status(500)
+        .json({ error: err.message });
+    });
+};
+
 const createProject: RequestHandler = (req, res, next) => {
   const project = req.body.project;
 
@@ -29,4 +43,4 @@ const createProject: RequestHandler = (req, res, next) => {
     });
 };
 
-export { getAllProjects, createProject };
+export { getAllProjects, createProject, getProject };

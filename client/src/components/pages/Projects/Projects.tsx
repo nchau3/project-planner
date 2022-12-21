@@ -9,6 +9,7 @@ import '../../../styles/component-styles/projects.scss';
 //routes
 import ProjectsRoot, { loader as projectsLoader } from './ProjectsRoot';
 import NewProject, { action as newProjectAction } from './NewProject';
+import SingleProject, { loader as singleProjectLoader } from './SingleProject';
 
 export const projectRoutes: RouteObject = {
   path: "projects",
@@ -23,6 +24,11 @@ export const projectRoutes: RouteObject = {
       path: "new",
       element: <NewProject />,
       action: newProjectAction
+    },
+    {
+      path: "/projects/:project_id",
+      element: <SingleProject />,
+      loader: singleProjectLoader
     }
   ]
 }

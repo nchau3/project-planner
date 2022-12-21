@@ -5,9 +5,12 @@ export async function getProjects() {
   return response.data.projects;
 }
 
+export async function getProject(project_id: string) {
+  const response = await axios.get(`/api/projects/${project_id}`);
+  return response.data;
+}
+
 export async function createProject(project: any) {
-  console.log('axios post...');
   const response = await axios.post('/api/projects/new', {project});
-  console.log(response);
   return response;
 }
