@@ -3,6 +3,6 @@ export interface Project {
   owner_id: number,
   title: string,
   description: string,
-  date_created: Date,
-  date_due: Date,  
+  date_created: string,
+  date_due: string  
 }
