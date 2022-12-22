@@ -1,8 +1,9 @@
 import * as projectQueries from '../db/queries/projects.js';
+import { convertProjectDates } from "../helpers.js";
 const getAllProjects = (req, res, next) => {
     projectQueries.getAllProjects()
         .then((projects) => {
-        res.json({ projects });
+        res.json(convertProjectDates(projects));
     })
         .catch((err) => {
         res
@@ -14,7 +15,7 @@ const getProject = (req, res, next) => {
     const project_id = req.params.project_id;
     projectQueries.getProject(project_id)
         .then((project) => {
-        res.json(project);
+        res.json(convertProjectDates(project));
     })
         .catch((err) => {
         res

@@ -2,11 +2,12 @@ import { RequestHandler } from "express";
 import { Project } from "../models/project";
 
 import * as projectQueries from '../db/queries/projects.js';
+import { convertProjectDates } from "../helpers.js";
 
 const getAllProjects: RequestHandler = (req, res, next) => {
   projectQueries.getAllProjects()
     .then((projects: Project[]) => {
-      res.json({ projects });
+      res.json(convertProjectDates(projects));
     })
     .catch((err: Error) => {
       res
@@ -20,7 +21,7 @@ const getProject: RequestHandler = (req, res, next) => {
 
   projectQueries.getProject(project_id)
     .then((project: Project) => {
-      res.json(project);
+      res.json(convertProjectDates(project));
     })
     .catch((err: Error) => {
       res

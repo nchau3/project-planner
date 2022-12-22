@@ -16,8 +16,6 @@ interface singleProject {
 
 export default function SingleProject() {
   const project = useLoaderData() as singleProject;
-  const convertedDate = new Date(project.date_created).toString();
-  console.log(convertedDate);
 
   return (
     <div>
