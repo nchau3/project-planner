@@ -24,10 +24,10 @@ const getProject: RequestHandler = async (req, res, next) => {
     const project = await projectQueries.getProject(project_id);
     const tasks = await taskQueries.getProjectTasks(project_id);
 
-    return res.json({
+    return res.json(convertProjectDates({
       ...project,
       tasks: tasks
-    })
+    }))
   } catch(err) {
     res
     .status(500)

@@ -6,7 +6,7 @@ export interface Task {
   description: string,
   priority: number,
   current_status: 'pending' | 'in progress' | 'complete',
-  date_created: Date,
-  date_started: Date,
-  date_due: Date
+  date_created: string,
+  date_started: string,
+  date_due: string
 }

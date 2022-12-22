@@ -26,7 +26,7 @@ const getProject = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
     try {
         const project = yield projectQueries.getProject(project_id);
         const tasks = yield taskQueries.getProjectTasks(project_id);
-        return res.json(Object.assign(Object.assign({}, project), { tasks: tasks }));
+        return res.json(convertProjectDates(Object.assign(Object.assign({}, project), { tasks: tasks })));
     }
     catch (err) {
         res
