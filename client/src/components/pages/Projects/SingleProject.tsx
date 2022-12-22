@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs, Params, useLoaderData } from "react-router-dom";
+import { LoaderFunctionArgs, useLoaderData } from "react-router-dom";
 import { getProject } from "../../../util/api";
 
 export function loader({ params }: LoaderFunctionArgs) {

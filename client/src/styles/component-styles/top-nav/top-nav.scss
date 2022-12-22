@@ -8,8 +8,7 @@
   width: 100%;
   padding: 0 1rem;
   position: fixed;
-  border-bottom: solid 1px;
-  background-color: white;
+  background-color: variables.$primary-color;
 
   ul {
     list-style-type: none;

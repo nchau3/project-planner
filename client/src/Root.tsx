@@ -6,9 +6,9 @@ export default function Root() {
   return (
     <main>
       <TopNav />
-      <div id="page-container">
+      <section id="page-container">
         <Outlet />
-      </div>
+      </section>
     </main>
   );
 }
