@@ -16,6 +16,7 @@ interface singleProject {
 
 export default function SingleProject() {
   const project = useLoaderData() as singleProject;
+  console.log(project)
 
   return (
     <div>
