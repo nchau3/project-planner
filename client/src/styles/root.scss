@@ -7,13 +7,15 @@ main {
 }
 
 #page-container {
+  @include button-styling;
+
   height: 100%;
   width: 100%;
   padding-top: 75px;
 
   h1 {
     font-size: 3rem;
-    padding: .5em;
+    padding-bottom: 2rem;
   }
 }
 
@@ -21,7 +23,7 @@ main {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 0 0 2em 300px;
+  padding: 2rem 2rem 2rem 20rem;
 }
 
 .router-link {

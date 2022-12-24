@@ -33,3 +33,9 @@
   }
 
 }
+
+@mixin page-card {
+  background-color: variables.$accent-color;
+  box-shadow: 3px 3px 4px rgb(59, 59, 59);
+  border-radius: 5px;
+}

@@ -16,12 +16,14 @@ export default function NewProject() {
   return (
     <>
       <h1>New Project</h1>
-      <Form method="post">
-        <input type="text" name="title" placeholder="title" />
-        <input type="number" name="owner_id" placeholder="owner_id"/>
-        <input type="text" name="description" placeholder="description"/>
-        <button type="submit">SUBMIT</button>
-      </Form>
+      <div className="form-container">
+        <Form method="post">
+          <input type="text" name="title" placeholder="title" />
+          <input type="number" name="owner_id" placeholder="owner_id"/>
+          <input type="text" name="description" placeholder="description"/>
+          <button type="submit">SUBMIT</button>
+        </Form>
+      </div>
     </>
 
   )

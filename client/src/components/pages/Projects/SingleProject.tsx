@@ -1,7 +1,6 @@
 import { LoaderFunctionArgs, useLoaderData } from "react-router-dom";
 import { getProject } from "../../../util/api";
 import TaskList from "./Tasks/TaskList";
-import TaskCard from "./Tasks/TaskListItem";
 
 export function loader({ params }: LoaderFunctionArgs) {
   const id = (params.project_id!)
