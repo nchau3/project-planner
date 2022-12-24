@@ -12,11 +12,6 @@ main {
   height: 100%;
   width: 100%;
   padding-top: 75px;
-
-  h1 {
-    font-size: 3rem;
-    padding-bottom: 2rem;
-  }
 }
 
 .page-content {
@@ -24,6 +19,29 @@ main {
   flex-direction: column;
   height: 100%;
   padding: 2rem 2rem 2rem 20rem;
+}
+
+.page-header {
+  @include page-card;
+  
+  padding: 1rem;
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h1, h3 {
+    padding-bottom: 2rem;
+  }
+
+  ul {
+    font-style: italic;
+
+    li {
+      padding: .25em 0;
+      border-top: solid 1px;
+    }
+  }
 }
 
 .router-link {

@@ -1,0 +1,30 @@
+.task-list {
+  padding: 1em;
+}
+
+.task-card {
+  width: 95%;
+  margin-left: 5%;
+  margin-top: .5em;
+  padding: .5em;
+  border: solid 1px;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .status-badge {
+      border: solid 1px;
+      border-radius: 3px;
+      padding: .65em;
+      color: white;
+    }
+
+    .status-badge--status-pending {
+      background-color: orange;
+    }
+  }
+
+
+}

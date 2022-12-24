@@ -21,12 +21,14 @@ export default function SingleProject() {
   
   return (
     <div>
-      <h1>{project.title}</h1>
-      <h3>{project.description}</h3>
-      <ul>
-        <li>{project.tasks_completed} of {project.tasks_total} tasks completed</li>
-        <li>Date Created: {project.date_created}</li>
-      </ul>
+      <div className="page-header">
+        <h1>{project.title}</h1>
+        <h3>{project.description}</h3>
+        <ul>
+          <li>{project.tasks_completed} of {project.tasks_total} tasks completed</li>
+          <li>Date Created: {project.date_created}</li>
+        </ul>
+      </div>
       <TaskList tasks={project.tasks} />
     </div>
   )
