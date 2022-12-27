@@ -21,7 +21,7 @@ export default function SingleProject() {
   
   return (
     <div>
-      <div className="page-header">
+      <div className="page-header page-header-details">
         <h1>{project.title}</h1>
         <h3>{project.description}</h3>
         <ul>

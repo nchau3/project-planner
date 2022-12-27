@@ -15,7 +15,9 @@ export async function action({request}: any) {
 export default function NewProject() {
   return (
     <>
-      <h1>New Project</h1>
+      <div className="page-header">
+        <h1>New Project</h1>
+      </div>
       <div className="form-container">
         <Form method="post">
           <input type="text" name="title" placeholder="title" />

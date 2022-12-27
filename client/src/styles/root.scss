@@ -11,7 +11,7 @@ main {
 
   height: 100%;
   width: 100%;
-  padding-top: 75px;
+  padding-top: 60px;
 }
 
 .page-content {
@@ -25,13 +25,16 @@ main {
   @include page-card;
   
   padding: 1rem;
+  margin-bottom: 1rem;
   
   h1 {
     font-size: 3rem;
   }
-  
+}
+
+.page-header-details {
   h1, h3 {
-    padding-bottom: 2rem;
+    padding-bottom: .5em;
   }
 
   ul {

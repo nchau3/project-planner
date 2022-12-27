@@ -20,15 +20,11 @@ export default function TaskListItem(props: taskListItemProps) {
     setOpen(!open);
   };
 
-  function onSubmit(event: Event): void {
-    event.preventDefault();
-  }
-
   return (
     <article className="task-card" onClick={onClick}>
       <header>
         <h3>{props.title}</h3>
-        <div className={`status-badge status-badge--status-${props.status}`}>{props.status}</div>
+        <div className={`status-badge status-badge--status-${props.status}`}>{(props.status).toUpperCase()}</div>
       </header>
       {open && 
       <>

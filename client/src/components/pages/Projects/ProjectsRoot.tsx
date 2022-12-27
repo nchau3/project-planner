@@ -25,7 +25,9 @@ export default function ProjectsRoot() {
 
   return (
     <>
+    <div className="page-header">
       <h1>Projects</h1>
+    </div>
       <ul className="project-list">
         {projectsList}
       </ul>

@@ -10,7 +10,9 @@ export default function Dashboard() {
     <>
       <SideNav items={navItems}/>
       <div className="page-content">
-        <h1>Dashboard</h1>
+        <div className='page-header'>
+          <h1>Dashboard</h1>
+        </div>
       </div>
     </>
   )

@@ -15,14 +15,18 @@
     align-items: center;
 
     .status-badge {
-      border: solid 1px;
-      border-radius: 3px;
       padding: .65em;
+      border-radius: 3px;
       color: white;
+      font-weight: bold;
     }
 
     .status-badge--status-pending {
       background-color: orange;
+    }
+
+    .status-badge--status-complete {
+      background-color: green;
     }
   }
 
