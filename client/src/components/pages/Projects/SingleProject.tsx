@@ -13,11 +13,14 @@ interface singleProject {
   tasks_completed: number;
   tasks_total: number;
   date_created: string;
-  tasks: [];
+  tasks: any[];
 }
 
 export default function SingleProject() {
   const project = useLoaderData() as singleProject;
+
+  const ongoingTasks = project.tasks.filter(task => task.status !== "completed");
+  const completedTasks = project.tasks.filter(task => task.status === "completed");
   
   return (
     <div>
@@ -29,7 +32,10 @@ export default function SingleProject() {
           <li>Date Created: {project.date_created}</li>
         </ul>
       </div>
-      <TaskList tasks={project.tasks} />
+      <h3>Ongoing Tasks</h3>
+      <TaskList tasks={ongoingTasks} />
+      <h3>Completed Tasks</h3>
+      <TaskList tasks={completedTasks} />
     </div>
   )
 }
