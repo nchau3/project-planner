@@ -21,8 +21,8 @@ export default function TaskListItem(props: taskListItemProps) {
   };
 
   return (
-    <article className="task-card" onClick={onClick}>
-      <header>
+    <article className="task-card">
+      <header onClick={onClick}>
         <h3>{props.title}</h3>
         <div className={`status-badge status-badge--status-${props.status}`}>{(props.status).toUpperCase()}</div>
       </header>
@@ -33,7 +33,13 @@ export default function TaskListItem(props: taskListItemProps) {
           <li>Date created: {props.date_created}</li>
         </ul>
         <Form method="patch">
-          <button>Mark Completed</button>
+          <select>
+            <option value="">--Change task status--</option>
+            <option value="pending">Pending</option>
+            <option value="in progress">In Progress</option>
+            <option value="completed">Completed</option>
+          </select>
+          <button type="submit">Submit</button>
         </Form>
       </>
       }
