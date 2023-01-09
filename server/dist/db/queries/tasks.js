@@ -11,4 +11,11 @@ const getProjectTasks = (project_id) => {
         return data.rows;
     });
 };
-export { getAllTasks, getProjectTasks };
+const changeTaskStatus = (task_id, status) => {
+    return db.query('UPDATE tasks SET status = $1 WHERE id = $2;', [status, task_id])
+        .then((data) => {
+        console.log(data);
+        return data.rows;
+    });
+};
+export { getAllTasks, getProjectTasks, changeTaskStatus };

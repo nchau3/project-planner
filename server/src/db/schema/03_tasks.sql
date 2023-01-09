@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS tasks CASCADE;
 DROP TYPE IF EXISTS status_type CASCADE;
 
-CREATE TYPE status_type AS ENUM ('pending', 'in progress', 'complete');
+CREATE TYPE status_type AS ENUM ('pending', 'in progress', 'completed');
 
 CREATE TABLE tasks (
   id SERIAL PRIMARY KEY NOT NULL,

@@ -14,4 +14,12 @@ const getProjectTasks = (project_id: string) => {
     })
 }
 
-export { getAllTasks, getProjectTasks };
+const changeTaskStatus = (task_id: string, status: string) => {
+  return db.query('UPDATE tasks SET status = $1 WHERE id = $2;', [status, task_id])
+    .then((data: any) => {
+      console.log(data);
+      return data.rows;
+    })
+}
+
+export { getAllTasks, getProjectTasks, changeTaskStatus };

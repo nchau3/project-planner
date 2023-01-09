@@ -14,3 +14,8 @@ export async function createProject(project: any) {
   const response = await axios.post('/api/projects/new', {project});
   return response;
 }
+
+export async function changeTaskStatus(task_id: string, status: string) {
+  const response = await axios.patch(`/api/tasks/${task_id}`, { status });
+  return response;
+}

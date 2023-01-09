@@ -22,13 +22,15 @@
     }
 
     .status-badge--status-pending {
+      background-color: rgb(255, 207, 50);
+    }
+
+    .status-badge--status-in-progress {
       background-color: orange;
     }
 
-    .status-badge--status-complete {
+    .status-badge--status-completed {
       background-color: green;
     }
   }
-
-
 }

@@ -10,4 +10,18 @@ const getAllTasks = (req, res, next) => {
             .json({ error: err.message });
     });
 };
-export { getAllTasks };
+const changeTaskStatus = (req, res, next) => {
+    console.log(req.body, req.params);
+    const task_id = req.params.task_id;
+    const status = req.body.status;
+    taskQueries.changeTaskStatus(task_id, status)
+        .then(data => {
+        res.json(data);
+    })
+        .catch((err) => {
+        res
+            .status(500)
+            .json({ error: err.message });
+    });
+};
+export { getAllTasks, changeTaskStatus };
